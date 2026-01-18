@@ -3,9 +3,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        <link rel="stylesheet" href="../css/style.css">
+        link(rel="stylesheet" href=require("css/style.scss"))
     body 
-        -var games = [{title: 'Red Dead Redemption 2', realiseDate: '26 октября 2018', image: 'redDead.jpg'},{title: 'Marvels Spider-Man', realiseDate: '7 сентября 2018', image: 'spiderMan.jpg'},{title: 'osu!', realiseDate: '16 сентября 2007', image: 'osu.jpg'},{title: 'Half-Life 2', realiseDate: '16 ноября 2004 г.', image: 'half-life2.jpg'},{title: 'Teslagrad', realiseDate: '13 декабря 2013', image: 'teslagrand.jpg'},{title: 'Teslagrad 2', realiseDate: '19 апреля 2023', image: 'teslagrand2.jpg'},{title: 'Outlast', realiseDate: '4 сентября 2013 ', image: 'outlast.jpg'}]
+        -var games = [{title: 'Red Dead Redemption 2', realiseDate: '26 октября 2018', image: 'img/redDead.jpg'},{title: 'Marvels Spider-Man', realiseDate: '7 сентября 2018', image: 'img/spiderMan.jpg'},{title: 'osu!', realiseDate: '16 сентября 2007', image: 'img/osu.jpg'},{title: 'Half-Life 2', realiseDate: '16 ноября 2004 г.', image: 'img/half-life2.jpg'},{title: 'Teslagrad', realiseDate: '13 декабря 2013', image: 'img/teslagrand.jpg'},{title: 'Teslagrad 2', realiseDate: '19 апреля 2023', image: 'img/teslagrand2.jpg'},{title: 'Outlast', realiseDate: '4 сентября 2013 ', image: 'img/outlast.jpg'}]
         .container
             h1.title Топ четких игр на ПК
             p Red Dead Redemption 2 Открытый мир в стиле вестерна, где игроки исследуют американский Дикий Запад в роли Датча ван дер Линде и его банды. Игра включает в себя охоту, рыбалку, бои и множество побочных заданий. История рассказывает о борьбе за выживание, дружбе и предательстве, с невероятной проработкой мира и персонажей.
@@ -21,8 +21,9 @@ html(lang="en")
                     li.grid__item
                         article.card
                             a.card__image(href="")
-                                img(src=`../img/${game.image}`)
+                                img(src=require(game.image))
                             h2.card__title
-                                a(href="")= game.title
+                                a(href="" )= game.title
                             span.card__date= "Дата выхода: " + game.realiseDate
-            
+
+
